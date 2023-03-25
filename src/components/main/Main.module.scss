@@ -1,0 +1,74 @@
+@import "../../styles/Variables.module";
+
+.main {
+  padding: 3.3333vw 19.53125vw;
+  background: $second-background-color;
+
+  .mainContainer {
+    width: 62.1942vw;
+    height: 38.9541vw;
+    padding: 1.1458vw 0.6770vw 0;
+    position: relative;
+
+    .mainTitle {
+      font-size: 2.0833vw;
+      line-height: 2.725vw;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .mainImage {
+      width: 50.46875vw;
+      height: 24.6875vw;
+      position: absolute;
+      top: 7.4479vw;
+      left: 5.9375vw;
+    }
+
+    .mainForm {
+      position: absolute;
+      bottom: 0;
+      left: 0.6770vw;
+    }
+  }
+}
+
+.form {
+  width: 60.9375vw;
+  height: 10.2604vw;
+  padding: 1.3020vw 1.3541vw 1.40625vw 1.3020vw;
+  background: $primary-background-color;
+
+  .formTitle {
+    font-size: 1.0416vw;
+    font-weight: 900;
+  }
+
+  .formSubtitle {
+    font-size: 0.9375vw;
+    font-weight: 300;
+    margin-bottom: 1.4583vw;
+  }
+
+  .formChoice {
+    font-size: $primary-font-size;
+    margin-bottom: 1.09375vw;
+
+    a {
+      color: $primary-color;
+      margin-right: 1.5625vw;
+    }
+  }
+
+  .formFields {
+    gap: 1.6145vw;
+
+    input[type=text] {
+      @include form-input;
+    }
+
+    .submitBtn {
+      @include primary-button(13.3333vw, 1.875vw);
+    }
+  }
+}

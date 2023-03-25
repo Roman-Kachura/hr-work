@@ -1,0 +1,45 @@
+@import "./Variables.module";
+@import "./classes";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: $primary-font-size;
+  color: $primary-color;
+  background: $primary-background-color;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+button, input, select, textarea {
+  outline: none;
+  background: $transparent;
+  transition: .3s;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: $primary-font-size;
+  line-height: 1em;
+  color: $primary-color;
+  margin: 0;
+}
+

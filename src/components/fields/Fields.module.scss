@@ -1,0 +1,22 @@
+@import "../../styles/Variables.module";
+
+
+.select {
+  @include form-input;
+  cursor: pointer;
+
+  .selectImage{
+    width: 0.3395vw;
+    height: 0.3395vw;
+  }
+}
+
+.file{
+  @include form-input;
+  cursor: pointer;
+
+  .fileImage{
+    width: 0.5958vw;
+    height: 0.625vw;
+  }
+}
