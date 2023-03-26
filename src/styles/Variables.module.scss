@@ -4,9 +4,12 @@ $third-background-color: #FFEF62;
 $transparent: rgba(0, 0, 0, 0);
 $primary-color: #000;
 $second-color: #fff;
+$primary-title-font-size:1.6666vw;
 $primary-font-size: 0.8333vw;
 $second-font-size: 0.7291vw;
 $primary-border-radius: 0.2604vw;
+$select-box-shadow: 0 0.3125vw 0.5208vw rgba(219, 219, 219, 0.25);
+$primary-select-button-color: #FBFDFE;
 
 @mixin form-input {
   position: relative;
@@ -15,7 +18,7 @@ $primary-border-radius: 0.2604vw;
   padding: 0.5208vw 0.625vw;
   font-size: 0.7291vw;
 
-  background: #FBFDFE;
+  background: $transparent;
   border: 0.0520vw solid rgba(0, 0, 0, 0.05);
   border-radius: $primary-border-radius;
 }
@@ -34,4 +37,23 @@ $primary-border-radius: 0.2604vw;
   background: $third-background-color;
   border-radius: $primary-border-radius;
   border: none;
+}
+
+@mixin vacancy-title{
+  font-size: 0.9375vw;
+  line-height: 1.5239vw;
+  font-weight: 400;
+  margin-bottom: 0.8333vw;
+}
+
+@mixin vacancy-salary{
+  font-size: $primary-font-size;
+  font-weight: 700;
+  margin-bottom: 0.4166vw;
+}
+
+@mixin vacancy-data-item{
+  font-size: $primary-font-size;
+  font-weight: 300;
+  margin-bottom: 0.4166vw;
 }

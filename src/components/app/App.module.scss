@@ -1,5 +1,21 @@
 @import "src/styles/Variables.module";
 
-.app{
+.app {
   color: $primary-color;
+}
+
+.appTitle {
+  .title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.6666vw;
+    color: $primary-color;
+  }
+
+  .subtitle {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25vw;
+    color: $primary-color;
+  }
 }

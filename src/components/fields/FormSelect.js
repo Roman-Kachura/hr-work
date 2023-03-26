@@ -1,13 +1,24 @@
 import style from './Fields.module.scss';
 import arrowDown from '../../images/arrow-down.svg';
+import {useState} from "react";
 
-export const FormSelect = () => {
+export const FormSelect = ({text, className, imageClassName, children, isOpen}) => {
+    const [open, setOpen] = useState(isOpen);
+    const clickHandler = (e) => {
+        e.preventDefault();
+        setOpen(!open);
+    };
     return (
-        <div className={`${style.select} flex-sb-c`}>
-            <span>Выберете удобный способ связи</span>
-            <span className={`${style.selectImage} image-container`}>
+        <div className={!open ? `${style.formSelect}` : `${style.formSelect} ${style.open}`}>
+            <button onClick={clickHandler} className={`${style.select} ${className} flex-sb-c`}>
+                <span>{text}</span>
+                <span className={`${style.selectImage} ${imageClassName} image-container`}>
                 <img src={arrowDown} alt=""/>
             </span>
+            </button>
+            <div className={style.children}>
+                {children}
+            </div>
         </div>
     )
 }

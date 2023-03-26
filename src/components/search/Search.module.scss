@@ -1,0 +1,36 @@
+@import "../../styles/Variables.module";
+
+.search {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.875vw;
+}
+
+.searchInput {
+  width: 100%;
+  height: 3.28125vw;
+  position: relative;
+  border-radius: $primary-border-radius;
+
+  input {
+    @include form-input;
+    background: $transparent;
+    width: 100%;
+    height: 100%;
+    font-size: $primary-font-size;
+  }
+
+  .searchLoupe {
+    width: 1.9270vw;
+    height: 1.9270vw;
+
+    position: absolute;
+    right: 1.8229vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+}

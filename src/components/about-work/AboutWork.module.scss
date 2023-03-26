@@ -1,0 +1,76 @@
+@import "src/styles/Variables.module";
+
+.aboutWork {
+  background: $primary-background-color;
+  padding: 6.25vw 0;
+
+  .aboutWorkTitle {
+    font-size: $primary-title-font-size;
+    font-weight: 900;
+    margin-bottom: 4.6213vw;
+  }
+
+  .aboutWorkContent {
+    display: grid;
+    grid-template-columns: 22.2395vw 22.2395vw 22.2395vw;
+    gap: 4.146875vw 2.0833vw;
+    width: 70.8333vw;
+    position: relative;
+
+    .aboutWorkItem {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1.25vw;
+      width: 22.2395vw;
+      height: 5.8854vw;
+      background: $second-background-color;
+      border-radius: $primary-border-radius;
+      padding: 0 $primary-title-font-size;
+      font-size: 1.0416vw;
+      font-weight: 400;
+
+      .number {
+        font-size: 2.0833vw;
+        font-weight: 700;
+        color: $third-background-color;
+      }
+    }
+
+    .aboutWorkButton {
+      @include primary-button(22.2395vw, 5.8854vw);
+    }
+
+    .aboutWorkImage {
+      position: absolute;
+
+      &.arrowFirst {
+        width: 13.4375vw;
+        height: 2.3296875vw;
+        top: -2.3296875vw;
+        left: 16.2239vw;
+      }
+
+      &.arrowSecond {
+        width: 13.4375vw;
+        height: 2.3296875vw;
+        top: -2.3296875vw;
+        right: 16.3541vw;
+      }
+
+      &.arrowThird {
+        width: 40.5208vw;
+        height: 4.1583vw;
+        top: 5.8854vw;
+        right: 14.0625vw;
+      }
+
+      &.arrowFourth {
+        width: 12.421875vw;
+        height: 5.3723vw;
+        right: 17.1354vw;
+        bottom: -2.3vw;
+      }
+    }
+  }
+}

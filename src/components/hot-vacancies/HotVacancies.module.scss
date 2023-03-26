@@ -1,0 +1,122 @@
+@import "../../styles/Variables.module";
+
+.hotVacancies {
+  padding: 2.5vw 0;
+  background: $second-background-color;
+
+  .hotVacanciesTitle {
+    margin-bottom: 0.9375vw;
+  }
+}
+
+.hotSlider {
+  width: 70.8333vw;
+  height: 16.3541vw;
+  position: relative;
+  margin-bottom: 2.5vw;
+
+  .sliderBlock {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .sliderWrapper {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-wrap: nowrap;
+      gap: 2.0833vw;
+      width: auto;
+      height: 100%;
+      transition: .3s;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .sliderButton {
+    width: 2vw;
+    height: 2vw;
+    border: none;
+
+    position: absolute;
+    right: -2.5vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+}
+
+.hotItem {
+  width: 22.2395vw;
+  height: 100%;
+  padding: 1.6666vw;
+  background: $primary-background-color;
+  border-radius: $primary-border-radius;
+
+  .hotVacanciesTitle {
+    @include vacancy-title;
+  }
+
+  .hotSalary {
+    @include vacancy-salary;
+  }
+
+  .hotSchedule,
+  .hotCountry,
+  .hotLastVacancies {
+    @include vacancy-data-item;
+  }
+
+  .hotLastVacancies {
+    margin-bottom: 0.8333vw;
+  }
+
+  .hotButton {
+    @include primary-button(100%, 2.9166vw);
+    font-size: 0.7291vw;
+  }
+}
+
+.hotForm {
+  width: 70.8333vw;
+  height: 10.3125vw;
+  padding: 1.6666vw;
+  background: $primary-background-color;
+
+  .formTitle {
+    font-size: 1.0416vw;
+    font-weight: 900;
+    margin-bottom: 0.4166vw;
+  }
+
+  .formSubtitle {
+    font-size: 0.9375vw;
+    font-weight: 300;
+    margin-bottom: 1.25vw;
+  }
+
+  .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .inputName {
+      @include form-input;
+      width: 20.5729vw;
+      height: 2.9166vw;
+    }
+
+    .select{
+      width: 20.5729vw;
+      height: 2.9166vw;
+    }
+
+    .submitBtn {
+      @include primary-button(20.5729vw, 2.9166vw);
+    }
+  }
+}
