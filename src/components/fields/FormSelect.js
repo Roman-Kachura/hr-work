@@ -3,6 +3,7 @@ import arrowDown from '../../images/arrow-down.svg';
 import {useState} from "react";
 
 export const FormSelect = ({text, className, imageClassName, children, isOpen}) => {
+    const finalClassName = className ? `${style.select} ${className}` : style.select;
     const [open, setOpen] = useState(isOpen);
     const clickHandler = (e) => {
         e.preventDefault();
@@ -10,7 +11,7 @@ export const FormSelect = ({text, className, imageClassName, children, isOpen}) 
     };
     return (
         <div className={!open ? `${style.formSelect}` : `${style.formSelect} ${style.open}`}>
-            <button onClick={clickHandler} className={`${style.select} ${className} flex-sb-c`}>
+            <button onClick={clickHandler} className={`${finalClassName} flex-sb-c`}>
                 <span>{text}</span>
                 <span className={`${style.selectImage} ${imageClassName} image-container`}>
                 <img src={arrowDown} alt=""/>

@@ -9,68 +9,201 @@
     font-weight: 900;
     margin-bottom: 4.6213vw;
   }
+}
 
-  .aboutWorkContent {
-    display: grid;
-    grid-template-columns: 22.2395vw 22.2395vw 22.2395vw;
-    gap: 4.146875vw 2.0833vw;
-    width: 70.8333vw;
+.aboutWorkContent {
+  display: grid;
+  grid-template-columns: 22.2395vw 22.2395vw 22.2395vw;
+  gap: 4.146875vw 2.0833vw;
+  width: 70.8333vw;
+  position: relative;
+
+  .aboutWorkItem {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.25vw;
+    width: 22.2395vw;
+    height: 5.8854vw;
+    background: $second-background-color;
+    border-radius: $primary-border-radius;
+    padding: 0 $primary-title-font-size;
+    font-size: 1.0416vw;
+    font-weight: 400;
+
+    .number {
+      font-size: 2.0833vw;
+      font-weight: 700;
+      color: $third-background-color;
+    }
+  }
+
+  .aboutWorkButton {
+    @include primary-button(22.2395vw, 5.8854vw);
+  }
+
+  .aboutWorkImage {
+    position: absolute;
+
+    &.arrowFirst {
+      width: 13.4375vw;
+      height: 2.3296875vw;
+      top: -2.3296875vw;
+      left: 16.2239vw;
+    }
+
+    &.arrowSecond {
+      width: 13.4375vw;
+      height: 2.3296875vw;
+      top: -2.3296875vw;
+      right: 16.3541vw;
+    }
+
+    &.arrowThird {
+      width: 40.5208vw;
+      height: 4.1583vw;
+      top: 5.8854vw;
+      right: 14.0625vw;
+    }
+
+    &.arrowFourth {
+      width: 12.421875vw;
+      height: 5.3723vw;
+      right: 17.1354vw;
+      bottom: -2.3vw;
+    }
+  }
+}
+
+.subscribe {
+  width: 100%;
+  margin-top: 9.253125vw;
+
+  .subscribeTitle {
+    font-size: $primary-title-font-size;
+    line-height: 2.1666vw;
+    font-weight: 900;
+    margin-bottom: 2.0833vw;
+  }
+
+  .subscribeContainer {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 2.0833vw;
     position: relative;
 
-    .aboutWorkItem {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 1.25vw;
-      width: 22.2395vw;
-      height: 5.8854vw;
-      background: $second-background-color;
-      border-radius: $primary-border-radius;
-      padding: 0 $primary-title-font-size;
-      font-size: 1.0416vw;
-      font-weight: 400;
+    .telegram {
+      .info {
+        width: 22.2395vw;
+        height: 13.90625vw;
+        padding: 2.0833vw 1.0416vw 2.0833vw 3.5416vw;
+        margin-bottom: 2.0833vw;
+        position: relative;
+        border-radius: $primary-border-radius;
+        box-shadow: -1px -1px 10px rgba(204, 204, 203, 0.25);
 
-      .number {
-        font-size: 2.0833vw;
+        .infoIcon {
+          width: 1.25vw;
+          height: 1.25vw;
+          position: absolute;
+          left: 1.1979vw;
+          top: 2.0833vw;
+        }
+
+        .telegramLink {
+          font-size: $second-font-size;
+          font-weight: 400;
+          color: #168ACD;
+          margin-bottom: 1.25vw;
+        }
+
+        .infoList {
+          list-style: none;
+          padding: 0;
+          font-size: $second-font-size;
+          line-height: 0.8890vw;
+          margin-bottom: 1.25vw;
+
+          li {
+            margin-bottom: 0.4166vw;
+          }
+        }
+      }
+
+      .infoButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22.2395vw;
+        height: 2.9166vw;
+        border-radius: $primary-border-radius;
+        border: none;
+        background: #FFEF624D;
+        font-size: $second-font-size;
         font-weight: 700;
-        color: $third-background-color;
       }
     }
 
-    .aboutWorkButton {
-      @include primary-button(22.2395vw, 5.8854vw);
+    .form {
+      width: 22.1875vw;
+
+      .formTitle {
+        margin-bottom: $primary-title-font-size;
+
+        h3 {
+          font-size: 1.0416vw;
+          line-height: 1.2291vw;
+          font-weight: 900;
+        }
+
+        h4 {
+          font-size: 0.9375vw;
+          line-height: 1.1276vw;
+        }
+      }
+
+      .formButtons {
+        margin-bottom: 1.25vw;
+
+        button {
+          font-size: $primary-font-size;
+          font-weight: 300;
+          border: none;
+
+          &.active {
+            font-weight: 900;
+          }
+        }
+      }
+
+      .formFields {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        gap: 1.25vw;
+
+        .input {
+          @include form-input;
+          width: 22.1875vw;
+          height: 2.9166vw;
+        }
+
+        .formSubmitButton {
+          @include primary-button(100%, 2.9166vw);
+          font-size: $second-font-size;
+          font-weight: 700;
+        }
+      }
     }
 
-    .aboutWorkImage {
+    .subscribeImage {
+      width: 22.2395vw;
+      height: 29.21875vw;
       position: absolute;
-
-      &.arrowFirst {
-        width: 13.4375vw;
-        height: 2.3296875vw;
-        top: -2.3296875vw;
-        left: 16.2239vw;
-      }
-
-      &.arrowSecond {
-        width: 13.4375vw;
-        height: 2.3296875vw;
-        top: -2.3296875vw;
-        right: 16.3541vw;
-      }
-
-      &.arrowThird {
-        width: 40.5208vw;
-        height: 4.1583vw;
-        top: 5.8854vw;
-        right: 14.0625vw;
-      }
-
-      &.arrowFourth {
-        width: 12.421875vw;
-        height: 5.3723vw;
-        right: 17.1354vw;
-        bottom: -2.3vw;
-      }
+      right: 0;
+      bottom: 0;
     }
   }
 }

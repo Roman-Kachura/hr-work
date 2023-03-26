@@ -3,13 +3,15 @@ import {AboutWorkItem} from "./AboutWorkItem";
 import arrow1 from '../../images/about/arrow1.svg';
 import arrow2 from '../../images/about/arrow2.svg';
 import arrow3 from '../../images/about/arrow3.svg';
+import {AboutWorkContainer} from "./AboutWorkContainer";
+import {Subscribe} from "./Subscribe";
 
 export const AboutWork = () => {
     return (
         <section className={style.aboutWork}>
             <div className='container'>
                 <h4 className={style.aboutWorkTitle}>Как мы работаем с потенциальным кандидатом</h4>
-                <div className={style.aboutWorkContent}>
+                <AboutWorkContainer>
                     <AboutWorkItem number={1} text='Вы оставляете заявку'/>
                     <AboutWorkItem number={2} text='Мы подбираем вам вакансию'/>
                     <AboutWorkItem number={3} text='Высылаем вам приглашение на работу'/>
@@ -28,7 +30,8 @@ export const AboutWork = () => {
                     <div className={`${style.aboutWorkImage} ${style.arrowFourth} image-container`}>
                         <img src={arrow3} alt=""/>
                     </div>
-                </div>
+                </AboutWorkContainer>
+                <Subscribe/>
             </div>
         </section>
     )
