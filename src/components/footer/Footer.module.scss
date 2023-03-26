@@ -1,0 +1,67 @@
+@import "src/styles/Variables.module";
+
+.footer {
+  width: 100%;
+  padding: 2.5vw 0;
+  background: $primary-color;
+
+  .footerInfo {
+    color: $second-color;
+    padding-bottom: 2.2916vw;
+    border-bottom: 0.0520vw solid $primary-background-color;
+    margin-bottom: 2.0833vw;
+
+    .infoItem {
+      .title {
+        font-size: 1.25vw;
+        font-weight: 900;
+        color: $second-color;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: $primary-font-size;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.065em;
+        color: $second-color;
+      }
+
+      p {
+        font-size: $second-font-size;
+        line-height: 0.9479vw;
+        font-weight: 400;
+        color: $second-color;
+
+        a {
+          color: $second-color;
+          text-decoration: underline;
+        }
+
+        &.infoNumber {
+          font-size: 0.9375vw;
+          line-height: 1em;
+          font-weight: 700;
+          padding: 0;
+          color: $second-color;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .footerSite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $second-color;
+    font-weight: 300;
+
+    a{
+      color: $second-color;
+      font-weight: 300;
+      text-decoration: underline;
+      margin-left: .3em;
+    }
+  }
+}
