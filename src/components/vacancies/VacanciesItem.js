@@ -17,7 +17,7 @@ export const VacanciesItem = () => {
                     <h5 className={style.formTitle}>Остались вопросы? Звоните!</h5>
                     <div className={style.formButtons}>
                         <FormSelect text='Выберете удобный способ связи' className={style.formSelect}/>
-                        <NavLink className={style.formLink} to={'/'}>Смотреть условия</NavLink>
+                        <NavLink className={style.formLink} to={'/vacancy'}>Смотреть условия</NavLink>
                     </div>
                 </div>
             </div>

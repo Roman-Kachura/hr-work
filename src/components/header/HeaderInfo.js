@@ -5,8 +5,8 @@ export const HeaderInfo = () => {
     return(
         <div className={`${style.headerInfo} container flex-sb-c`}>
             <div className={style.infoItem}>
-                <h2 className={style.title}>HR-work.services</h2>
-                <h3 className={style.subtitle}>Сервис для поиска работы</h3>
+                <div className={style.title}>HR-work.services</div>
+                <div className={style.subtitle}>Сервис для поиска работы</div>
             </div>
             <div className={style.infoItem}>
                 <p>Лучший Сервис для поиска работы в ЕС</p>

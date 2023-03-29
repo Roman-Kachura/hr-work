@@ -1,11 +1,12 @@
 $primary-background-color: #fff;
 $second-background-color: #F6FDFF;
 $third-background-color: #FFEF62;
+$third-background-color-tr: rgba(255, 239, 98, 0.4);
 $transparent: rgba(0, 0, 0, 0);
 $primary-color: #000;
 $second-color: #fff;
 $primary-title-font-size:1.6666vw;
-$primary-font-size: 0.8333vw;
+$primary-font-size: 100%;
 $second-font-size: 0.7291vw;
 $primary-border-radius: 0.2604vw;
 $select-box-shadow: 0 0.3125vw 0.5208vw rgba(219, 219, 219, 0.25);
@@ -40,8 +41,8 @@ $primary-select-button-color: #FBFDFE;
 }
 
 @mixin vacancy-title{
-  font-size: 0.9375vw;
-  line-height: 1.5239vw;
+  font-size: 1.5rem;
+  line-height: 1;
   font-weight: 400;
   margin-bottom: 0.8333vw;
 }

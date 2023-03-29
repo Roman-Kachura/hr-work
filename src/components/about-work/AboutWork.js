@@ -4,7 +4,6 @@ import arrow1 from '../../images/about/arrow1.svg';
 import arrow2 from '../../images/about/arrow2.svg';
 import arrow3 from '../../images/about/arrow3.svg';
 import {AboutWorkContainer} from "./AboutWorkContainer";
-import {Subscribe} from "./Subscribe";
 
 export const AboutWork = () => {
     return (
@@ -31,7 +30,6 @@ export const AboutWork = () => {
                         <img src={arrow3} alt=""/>
                     </div>
                 </AboutWorkContainer>
-                <Subscribe/>
             </div>
         </section>
     )

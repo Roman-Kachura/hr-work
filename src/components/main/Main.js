@@ -4,7 +4,7 @@ import formBackground from "../../images/form-background.svg";
 
 export const Main = () => {
     return (
-        <main className={style.main}>
+        <section className={style.main}>
             <div className={style.mainContainer}>
                 <h2 className={style.mainTitle}>
                     Легальная работа в ЕС — официальное трудоустройство в течении 1-3 рабочих дней
@@ -14,6 +14,6 @@ export const Main = () => {
                 </div>
                 <Form className={style.mainForm}/>
             </div>
-        </main>
+        </section>
     )
 }

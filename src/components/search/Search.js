@@ -5,13 +5,17 @@ import {AppTitle} from "../app/AppTitle";
 
 export const Search = () => {
     return (
-        <div className={style.search}>
-            <AppTitle
-                title='Ищите работу в Беларуси?'
-                subtitle='Мы прямая компания-наниматель без посредников в поиске сотрудников'
-            />
-            <SearchInput/>
-        </div>
+        <section className={style.searchSection}>
+            <div className="container">
+                <div className={style.search}>
+                    <AppTitle
+                      title='Ищите работу в Беларуси?'
+                      subtitle='Мы прямая компания-наниматель без посредников в поиске сотрудников'
+                    />
+                    <SearchInput/>
+                </div>
+            </div>
+        </section>
     )
 }
 
