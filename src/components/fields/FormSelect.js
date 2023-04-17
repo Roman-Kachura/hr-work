@@ -12,10 +12,10 @@ export const FormSelect = ({text, className, imageClassName, children, isOpen}) 
     return (
         <div className={!open ? `${style.formSelect}` : `${style.formSelect} ${style.open}`}>
             <button onClick={clickHandler} className={`${finalClassName} flex-sb-c`}>
-                <span>{text}</span>
+                <span className={style.titleSelect}>{text}</span>
                 <span className={`${style.selectImage} ${imageClassName} image-container`}>
-                <img src={arrowDown} alt=""/>
-            </span>
+                    <img src={arrowDown} alt=""/>
+                </span>
             </button>
             <div className={style.children}>
                 {children}

@@ -14,10 +14,10 @@ export const VacanciesItem = () => {
                 <div className={style.itemPayment}>Оплата за жильё: БЕСПЛАТНО + 50 € за комунальные платежи</div>
                 <div className={style.itemLastVacancies}>Оставшихся вакансий: ВСЕГО 3 🔥</div>
                 <div className={style.itemForm}>
-                    <h5 className={style.formTitle}>Остались вопросы? Звоните!</h5>
+                    <div className={style.formTitle}>Остались вопросы? Звоните!</div>
                     <div className={style.formButtons}>
                         <FormSelect text='Выберете удобный способ связи' className={style.formSelect}/>
-                        <NavLink className={style.formLink} to={'/vacancy'}>Смотреть условия</NavLink>
+                        <NavLink className={"baseBtn"} to={'/vacancy'}>Смотреть условия</NavLink>
                     </div>
                 </div>
             </div>

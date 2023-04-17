@@ -1,10 +1,12 @@
 import style from "./Header.module.scss";
 import {NavLink} from "react-router-dom";
 
-const links = [{text: 'Каталог вакансий', url: '/'}, {
-    text: 'Визы и приглашения на работу',
-    url: '/2'
-}, {text: 'Для партнеров', url: '/3'}, {text: 'Вопросы', url: '/4'}, {text: 'Блог', url: '/5'}]
+const links = [
+    {text: 'Каталог вакансий', url: '/'},
+    {text: 'Наша строительная компаний', url: '/2'},
+    {text: 'Наше рекламное агентство', url: '/3'},
+    {text: 'Контакты', url: '/4'}
+]
 
 export const HeaderNav = () => {
     return (<nav className={`${style.headerNav}`}>

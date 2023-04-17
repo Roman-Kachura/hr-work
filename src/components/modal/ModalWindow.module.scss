@@ -1,0 +1,153 @@
+@import "../../styles/Variables.module";
+@import "../../styles/index";
+.modal{
+  opacity: 0;
+  z-index: -1000;
+  transition: .3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 1;
+    z-index: 1000;
+
+
+
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+
+    .modalWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      top: 50%;
+      margin-top: -330px;
+      width: 100%;
+      max-width: 748px;
+      background: $second-color;
+      padding: 50px 44px;
+      position: relative;
+
+      @media (max-width: 767px) {
+        margin-top: 0;
+        top: auto;
+        height: 100%;
+      }
+
+      .title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        color: $primary-color;
+        margin-bottom: 32px;
+      }
+
+      .subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+        margin-bottom: 24px;
+      }
+
+      .form {
+        height: 216px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 32px;
+
+        @media (max-width: 767px) {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .fields {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          flex-direction: column;
+          height: 100%;
+          gap: 24px;
+
+          .input {
+            @include form-input;
+            width: 310px;
+            height: 56px;
+            font-size: 14px;
+            padding: 16px;
+          }
+        }
+
+        .file {
+          align-items: flex-start;
+          width: 310px;
+          height: 100%;
+          padding: 16px;
+          font-size: 14px;
+        }
+      }
+
+      .modalContact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 32px;
+
+        .title {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          margin-bottom: 25px;
+        }
+
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          gap: 40px;
+
+          .linksItem {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            .itemImage {
+              width: 30px;
+              height: 30px;
+              margin-right: 8px;
+            }
+
+            .itemText {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 17px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+
+      .modalButton {
+        @include primary-button(310px, 56px);
+      }
+
+      .modalCloseButton {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border: none;
+        font-weight: 700;
+      }
+    }
+  }
+}

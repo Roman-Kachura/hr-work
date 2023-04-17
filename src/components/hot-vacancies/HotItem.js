@@ -11,7 +11,7 @@ export const HotItem = (
             <div className={style.hotSchedule}>{schedule}</div>
             <div className={style.hotCountry}>{country}</div>
             <div className={style.hotLastVacancies}>{lastVacancies}</div>
-            <NavLink to='/' className={style.hotButton}>Смотреть условия</NavLink>
+            <NavLink to='/vacancy' className={"baseBtn"}>Смотреть условия</NavLink>
         </div>
     )
 }

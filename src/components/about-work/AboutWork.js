@@ -3,6 +3,7 @@ import {AboutWorkItem} from "./AboutWorkItem";
 import arrow1 from '../../images/about/arrow1.svg';
 import arrow2 from '../../images/about/arrow2.svg';
 import arrow3 from '../../images/about/arrow3.svg';
+import arrow4 from '../../images/about/arrow4.svg';
 import {AboutWorkContainer} from "./AboutWorkContainer";
 
 export const AboutWork = () => {
@@ -26,7 +27,13 @@ export const AboutWork = () => {
                     <div className={`${style.aboutWorkImage} ${style.arrowThird} image-container`}>
                         <img src={arrow2} alt=""/>
                     </div>
+                    <div className={`${style.aboutWorkImage} ${style.arrowThird} image-container`}>
+                        <img src={arrow2} alt=""/>
+                    </div>
                     <div className={`${style.aboutWorkImage} ${style.arrowFourth} image-container`}>
+                        <img src={arrow4} alt=""/>
+                    </div>
+                    <div className={`${style.aboutWorkImage} ${style.arrowFifth} image-container`}>
                         <img src={arrow3} alt=""/>
                     </div>
                 </AboutWorkContainer>

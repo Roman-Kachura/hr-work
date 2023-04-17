@@ -1,6 +1,6 @@
 import style from './Vacancies.module.scss';
 import {VacanciesItem} from "./VacanciesItem";
-import {VacanciesPagination} from "./VacanciesPagination";
+import {Pagination} from "../pagination/Pagination";
 
 export const VacanciesContent = () => {
     return (
@@ -8,7 +8,7 @@ export const VacanciesContent = () => {
             <VacanciesItem/>
             <VacanciesItem/>
             <VacanciesItem/>
-            <VacanciesPagination/>
+            <Pagination/>
         </div>
     )
 }

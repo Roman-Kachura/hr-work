@@ -53,30 +53,32 @@ export const VacanciesSideBar = () => {
     return (
         <aside className={style.vacanciesSideBar}>
             <h5 className={style.sideBarTitle}>Фильтр</h5>
-            <FormSelect text='Доступные вакансии' className={style.sideBarSelect} imageClassName={style.selectImage}>
+            <div className={style.filters}>
+              <FormSelect text='Доступные вакансии' className={style.sideBarSelect} imageClassName={style.selectImage}>
                 {
-                    roles.map((r, i) =>
-                        <VacanciesButton
-                            key={i}
-                            value={r.value}
-                            activeValue={activeRole}
-                            callBack={changeRole}/>
-                    )
+                  roles.map((role, i) =>
+                    <VacanciesButton
+                      key={i}
+                      value={role.value}
+                      activeValue={activeRole}
+                      callBack={changeRole}/>
+                  )
                 }
-            </FormSelect>
-            <FormSelect text='Оплата в час' className={style.sideBarSelect} imageClassName={style.selectImage}>
+              </FormSelect>
+              <FormSelect text='Оплата в час' className={style.sideBarSelect} imageClassName={style.selectImage}>
                 <h5 className={style.selectTitle}>В месяц оплата от 1000$ - 5000$</h5>
                 <RadioButtons values={salary} name='salary' callBack={changeSalary}/>
-            </FormSelect>
-            <FormSelect text='Рабочих часов' className={style.sideBarSelect} imageClassName={style.selectImage}>
+              </FormSelect>
+              <FormSelect text='Рабочих часов' className={style.sideBarSelect} imageClassName={style.selectImage}>
                 <RadioButtons values={hoursInDay} name='hours' callBack={changeHours}/>
-            </FormSelect>
-            <FormSelect text='График работы' className={style.sideBarSelect} imageClassName={style.selectImage}>
+              </FormSelect>
+              <FormSelect text='График работы' className={style.sideBarSelect} imageClassName={style.selectImage}>
                 <RadioButtons values={schedule} name='schedule' callBack={changeSchedule}/>
-            </FormSelect>
-            <FormSelect text='Рабочих часов' className={style.sideBarSelect} imageClassName={style.selectImage}>
+              </FormSelect>
+              <FormSelect text='Рабочих часов' className={style.sideBarSelect} imageClassName={style.selectImage}>
                 <RadioButtons values={countries} name='country' callBack={changeCountry}/>
-            </FormSelect>
+              </FormSelect>
+            </div>
         </aside>
     )
 }

@@ -38,4 +38,64 @@
   margin-bottom: 2rem;
 }
 
+.inputBase {
+  @include form-input;
 
+  @media (max-width: 767px) {
+    height: 46px;
+  }
+
+  @media (max-width: 609px) {
+    height: 36px;
+  }
+}
+
+.baseBtn {
+  @include primary-button(100%, 56px);
+
+  @media (max-width: 767px) {
+    height: 46px;
+  }
+
+  @media (max-width: 609px) {
+    height: 36px;
+  }
+}
+
+.secondaryBtn {
+  @include secondary-button(100%, 56px);
+
+  @media (max-width: 767px) {
+    height: 46px;
+  }
+
+  @media (max-width: 609px) {
+    height: 36px;
+  }
+}
+
+ul {
+  @include list;
+
+  li {
+    position: relative;
+
+    &:before {
+      content: '\2013';
+      display: inline-block;
+      margin-right: .5rem;
+    }
+  }
+}
+
+.formTitleBase {
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.formSubtitleBase {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
