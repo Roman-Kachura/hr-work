@@ -1,5 +1,7 @@
 import style from "./Header.module.scss";
 import arrowDown from "../../images/arrow-down.svg";
+import avatar from "../../images/avatar.svg";
+import viberImage from '../../images/viber.svg';
 
 export const HeaderInfo = () => {
     return(
@@ -9,16 +11,33 @@ export const HeaderInfo = () => {
                 <div className={style.subtitle}>Сервис для поиска работы</div>
             </div>
             <div className={style.infoItem}>
-                <p>Лучший Сервис для поиска работы в ЕС</p>
-                <p>Сопровождаем на всех этапах трудоустройства</p>
+                <div className={style.infoText}>Лучший Сервис для поиска работы в ЕС</div>
+                <div className={style.infoText}>Мы прямой работодатель</div>
             </div>
             <div className={style.infoItem}>
-                <p>Для HR агентств и прямых работодателей</p>
-                <p>Хотите <a href='src/components'>разместить ваши вакансии</a> в нашей базе?</p>
+                <div className={style.infoText}><a className={style.outlineBtn} href='src/components'>Отправить ваше CV</a></div>
             </div>
-            <div className={style.infoItem}>
-                <p>HR менеджер сейчас Online</p>
-                <p><button className='flex-start-center'>+375 (44) 711-24-64 <img src={arrowDown} alt=""/></button></p>
+          <div className={style.infoItem}>
+            <div className={style.infoText}>
+              <a className={style.viber} href='src/viber'>
+                        <span className={`${style.viberImage} image-container`}>
+                            <img src={viberImage} alt=""/>
+                        </span>
+                <span className={style.viberText}>Viber</span>
+                <span className={'image-container'}>
+                            <img src={arrowDown} alt=""/>
+                        </span>
+              </a>
+            </div>
+          </div>
+            <div className={`${style.infoItem} flex-start-center`}>
+                <div className={style.avatar}><img src={avatar}/></div>
+                <div>
+                  <div className={style.infoText}>HR менеджер сейчас Online</div>
+                  <div className={style.infoText}>
+                    <button className={style.btnDropdown}>+375 (44) 711-24-64 <img src={arrowDown} alt=""/></button>
+                  </div>
+                </div>
             </div>
         </div>
     )

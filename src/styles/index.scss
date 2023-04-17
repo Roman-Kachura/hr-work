@@ -14,9 +14,17 @@ html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+
+  @media (max-width: 767px) {
+    font-size: $sm-font-size;
+  }
+
+  @media (max-width: 609px) {
+    font-size: $xs-font-size;
+  }
 }
 
-body{
+body {
   padding: 0;
   margin: 0;
 }

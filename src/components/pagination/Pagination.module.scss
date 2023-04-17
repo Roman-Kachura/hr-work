@@ -1,0 +1,44 @@
+@import "../../styles/Variables.module";
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.71875vw;
+  font-size: 1.25rem;
+
+  span {
+    font-weight: 400;
+  }
+
+  .paginationButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+
+    font-weight: 400;
+
+    width: 46px;
+    height: 46px;
+
+    &.active {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  .paginationIconButton {
+    border: none;
+
+    .paginationIcon {
+      width: 14px;
+      height: 20px;
+      transform: rotate(-90deg);
+    }
+  }
+}
+

@@ -10,10 +10,8 @@
 }
 
 .hotSlider {
-  width: 70.8333vw;
-  height: 16.3541vw;
   position: relative;
-  margin-bottom: 2.5vw;
+  margin-bottom: 2rem;
 
   .sliderBlock {
     width: 100%;
@@ -26,24 +24,24 @@
       justify-content: start;
       align-items: start;
       flex-wrap: nowrap;
-      gap: 2.0833vw;
+      gap: 30px;
       width: auto;
       height: 100%;
       transition: .3s;
 
-      position: absolute;
+      position: relative;
       left: 0;
       top: 0;
     }
   }
 
   .sliderButton {
-    width: 2vw;
-    height: 2vw;
+    width: 40px;
+    height: 40px;
     border: none;
 
     position: absolute;
-    right: -2.5vw;
+    right: -60px;
     top: 0;
     bottom: 0;
     margin: auto 0;
@@ -51,9 +49,10 @@
 }
 
 .hotItem {
-  width: 22.2395vw;
+  width: 30%;
+  flex-grow: 0;
   height: 100%;
-  padding: 1.6666vw;
+  padding: 2rem;
   background: $primary-background-color;
   border-radius: $primary-border-radius;
 
@@ -72,51 +71,11 @@
   }
 
   .hotLastVacancies {
-    margin-bottom: 0.8333vw;
-  }
-
-  .hotButton {
-    @include primary-button(100%, 2.9166vw);
-    font-size: 0.7291vw;
+    margin-bottom: 1rem;
   }
 }
 
 .hotForm {
-  width: 70.8333vw;
-  height: 10.3125vw;
-  padding: 1.6666vw;
-  background: $primary-background-color;
-
-  .formTitle {
-    font-size: 1.0416vw;
-    font-weight: 900;
-    margin-bottom: 0.4166vw;
-  }
-
-  .formSubtitle {
-    font-size: 0.9375vw;
-    font-weight: 300;
-    margin-bottom: 1.25vw;
-  }
-
-  .form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .inputName {
-      @include form-input;
-      width: 20.5729vw;
-      height: 2.9166vw;
-    }
-
-    .select{
-      width: 20.5729vw;
-      height: 2.9166vw;
-    }
-
-    .submitBtn {
-      @include primary-button(20.5729vw, 2.9166vw);
-    }
-  }
+  padding: 2rem;
+  background-color: $primary-background-color;
 }

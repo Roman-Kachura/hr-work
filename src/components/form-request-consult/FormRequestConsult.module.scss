@@ -1,0 +1,81 @@
+@import "../../styles/Variables.module";
+
+.formRequestConsult {
+  background: $primary-background-color;
+  margin-top: 2.5rem;
+}
+
+.formTitle {
+  text-align: center;
+}
+
+.formSubtitle {
+  text-align: center;
+}
+
+.formChoice {
+  font-size: $primary-font-size;
+  margin-bottom: 1rem;
+
+  a {
+    color: $primary-color;
+    margin-right: 2.5rem;
+  }
+}
+
+.formFields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2.5em;
+  grid-row-gap: 1.5em;
+
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 509px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formRequestConsultSmall {
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    max-width: 426px;
+  }
+
+  .formTitle {
+    text-align: left;
+  }
+
+  .formSubtitle {
+    text-align: left;
+  }
+}
+
+.formFieldsSmall {
+  display: grid;
+  grid-row-gap: 1.5em;
+  grid-template-columns: 1fr;
+
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2.5em;
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 509px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

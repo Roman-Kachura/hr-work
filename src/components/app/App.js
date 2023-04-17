@@ -2,6 +2,7 @@ import style from './App.module.scss';
 import {Header} from "../header/Header";
 import {Footer} from "../footer/Footer";
 import {Content} from "../content/Content";
+import {ModalWindow} from "../modal/ModalWindow";
 
 export const App = () => {
     return (
@@ -9,6 +10,7 @@ export const App = () => {
             <Header/>
             <Content/>
             <Footer/>
+            <ModalWindow/>
         </div>
     )
 }

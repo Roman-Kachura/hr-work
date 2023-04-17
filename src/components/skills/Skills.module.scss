@@ -1,0 +1,13 @@
+@import "src/styles/Variables.module";
+
+.skillsSection {
+  background: $primary-background-color;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .skillsTitle {
+    font-size: $primary-title-font-size;
+    font-weight: 900;
+    margin-bottom: 4.6213vw;
+  }
+}

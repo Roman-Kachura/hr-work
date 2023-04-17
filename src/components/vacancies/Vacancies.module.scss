@@ -9,12 +9,22 @@
     align-items: flex-start;
     margin-top: 2.2395vw;
     gap: 2.0833vw;
+
+    @media (max-width: 1099px) {
+      flex-direction: column;
+    }
   }
 }
 
 .vacanciesSideBar {
-  width: 310px;
-  flex-shrink: 0;
+  @media (min-width: 1100px) {
+    width: 310px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1099px) {
+    width: 100%;
+  }
 
   .sideBarTitle {
     color: #676262;
@@ -58,6 +68,18 @@
   }
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  & > div {
+    @media (max-width: 1099px) {
+      flex-basis: 15%;
+    }
+  }
+}
+
 .sideBarButton {
   display: flex;
   justify-content: start;
@@ -82,11 +104,9 @@
   justify-content: start;
   align-items: flex-start;
   flex-direction: column;
-  flex-grow: 1;
-
+  width: 100%;
   gap: 2.0833vw;
   padding-top: 1.51vw;
-
 }
 
 .vacanciesItem {
@@ -96,7 +116,6 @@
   gap: 2.2395vw;
 
   width: 100%;
-  height: 16.8229vw;
   padding: 1.0416vw;
   background: $second-background-color;
 
@@ -122,9 +141,9 @@
 
     .itemForm {
       .formTitle {
-        font-size: 0.7291vw;
+        font-size: $second-font-size;
         font-weight: 700;
-        margin-bottom: 0.4166vw;
+        margin-bottom: .5rem;
       }
 
       .formButtons {
@@ -134,14 +153,16 @@
         gap: 2.0833vw;
 
         .formSelect {
-          width: 15.46875vw;
-          height: 2.9166vw;
+          @include form-input;
           margin: 0;
-        }
 
-        .formLink {
-          @include primary-button(15.46875vw, 2.9166vw);
-          font-size: 0.7291vw;
+          @media (max-width: 767px) {
+            height: 46px;
+          }
+
+          @media (max-width: 609px) {
+            height: 36px;
+          }
         }
       }
     }
@@ -154,48 +175,6 @@
 
     img {
       object-fit: cover;
-    }
-  }
-}
-
-.pagination {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.71875vw;
-
-  span {
-    font-size: 1.0416vw;
-    font-weight: 400;
-  }
-
-  .paginationButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: none;
-    border-radius: 50%;
-
-    font-size: 1.0416vw;
-    font-weight: 400;
-
-    width: 2.3958vw;
-    height: 2.3958vw;
-
-    &.active {
-      border: 0.0520vw solid $primary-color;
-    }
-  }
-
-  .paginationIconButton {
-    border: none;
-
-    .paginationIcon {
-      width: 1.0416vw;
-      height: 1.0416vw;
-      transform: rotate(-90deg);
     }
   }
 }
