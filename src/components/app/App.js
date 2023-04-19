@@ -10,7 +10,7 @@ export const App = () => {
             <Header/>
             <Content/>
             <Footer/>
-            <ModalWindow/>
+            {/*<ModalWindow/>*/}
         </div>
     )
 }
