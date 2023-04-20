@@ -2,17 +2,10 @@ import style from './ModalWindow.module.scss';
 import {FormFile} from "../fields/FormFile";
 import {modalDB} from "./modalData";
 import {LinksItem} from "./LinksItem";
-import {useEffect, useState} from "react";
 
-export const ModalWindow = () => {
-    const [open, setOpen] = useState(false);
-    const finishClassName = open ? `${style.modal} ${style.active}` : style.modal;
-    const closeHandler = () => setOpen(false);
-    const openHandler = () => setOpen(true);
-    useEffect(() => {
-        const timeoutID = setTimeout(openHandler, 3000);
-        return () => clearTimeout(timeoutID);
-    }, [])
+export const ModalWindow = ({closeModal, isOpen}) => {
+
+    const finishClassName = isOpen ? `${style.modal} ${style.active}` : style.modal;
     return (
         <div className={finishClassName}>
             <div className={style.modalWrapper}>
@@ -33,7 +26,7 @@ export const ModalWindow = () => {
                     </div>
                 </div>
                 <button className={style.modalButton}>отправить</button>
-                <button onClick={closeHandler} className={style.modalCloseButton}>&#9587;</button>
+                <button onClick={closeModal} className={style.modalCloseButton}>&#9587;</button>
             </div>
         </div>
     )
