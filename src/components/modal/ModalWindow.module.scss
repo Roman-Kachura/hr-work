@@ -1,6 +1,7 @@
 @import "../../styles/Variables.module";
 @import "../../styles/index";
 .modal{
+  display: none;
   opacity: 0;
   z-index: -1000;
   transition: .3s;

@@ -33,23 +33,78 @@
     border: 2px solid $third-background-color;
     border-radius: $primary-border-radius;
   }
-  .viber {
+
+  .headerRadio {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: .25rem;
+    padding: .5rem;
     border-radius: $primary-border-radius;
     background: rgba(255, 239, 98, 0.3);
     color: $primary-color;
+    cursor: pointer;
+    position: relative;
 
-    .viberImage {
+    .listImage {
       width: 30px;
       height: 30px;
       margin-right: 8px;
     }
 
-    .viberText {
+    .radioText {
       margin-right: 42px;
+    }
+
+    .radioList {
+      width: 100%;
+      height: 0;
+      opacity: 0;
+      background: $third-background-color;
+      border-radius: $primary-border-radius;
+      border: 1px solid #000;
+      position: absolute;
+      left: 0;
+      top: 2rem;
+      transition: .3s;
+      z-index: -10000;
+
+      &.open {
+        height: auto;
+        opacity: 1;
+        z-index: 10000;
+
+        .listItem {
+          height: auto;
+          opacity: 1;
+        }
+      }
+
+      .listItem {
+        height: auto;
+        opacity: 1;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: .25rem;
+        border-radius: $primary-border-radius;
+        color: $primary-color;
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+          background: $second-background-color;
+        }
+
+        .listImage {
+          width: 30px;
+          height: 30px;
+          margin-right: 8px;
+        }
+
+        .listText {
+          margin-right: 42px;
+        }
+      }
     }
   }
 
@@ -168,13 +223,14 @@
 
       .headerNav {
         display: block;
+
         .navContainer {
           display: flex;
           justify-content: start;
           align-items: flex-start;
           flex-direction: column;
 
-          .navLink{
+          .navLink {
             padding: .5rem 1rem;
           }
         }

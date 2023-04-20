@@ -5,8 +5,14 @@ import {Skills} from "../components/skills/Skills";
 import {VacancyDescription} from "../components/vacancy-description/VacancyDescription";
 import {CompanyDescription} from "../components/company-description/CompanyDescription";
 import {MotivationWorker} from "../components/motivation-worker/MotivationWorker";
+import {useEffect} from "react";
 
 export const VacancyCardPage = () => {
+    useEffect(()=>{
+        window.scrollTo({
+            top:0
+        });
+    },[])
     return (
         <>
             <MainVacancy/>
