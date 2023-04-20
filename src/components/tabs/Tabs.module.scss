@@ -1,0 +1,47 @@
+@import "src/styles/Variables.module";
+
+.tabsContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabContent {
+  padding: 2rem;
+  background: $primary-background-color;
+  box-shadow: -1px -1px 10px rgba(204, 204, 203, 0.25), 5px 5px 10px rgba(204, 204, 203, 0.25);
+}
+
+.tabsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 609px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 445px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tabItem {
+  padding: 0.5625rem;
+  height: 56px;
+  border: 2px solid $third-background-color-tr;
+  border-radius: $primary-border-radius;
+
+  @media (max-width: 767px) {
+    height: 46px;
+  }
+
+  &.active {
+    background: $third-background-color;
+    font-weight: 700;
+  }
+}
