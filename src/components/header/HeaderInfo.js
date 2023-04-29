@@ -23,15 +23,6 @@ export const HeaderInfo = ({openModal}) => {
             <div className={style.infoItem}>
                 <div className={style.infoText}>
                     <HeaderRadio/>
-                    {/*<a className={style.viber} href='src/viber'>*/}
-                    {/*    <span className={`${style.viberImage} image-container`}>*/}
-                    {/*        <img src={viberImage} alt=""/>*/}
-                    {/*    </span>*/}
-                    {/*    <span className={style.viberText}>Viber</span>*/}
-                    {/*    <span className={'image-container'}>*/}
-                    {/*        <img src={arrowDown} alt=""/>*/}
-                    {/*    </span>*/}
-                    {/*</a>*/}
                 </div>
             </div>
             <div className={`${style.infoItem} flex-start-center`}>

@@ -37,19 +37,9 @@ $primary-select-button-color: #FBFDFE;
 
 @mixin primary-button($width,$height) {
   @include btn;
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-
   width: $width;
   height: $height;
-
-  //font-size: 0.875rem;
-  //font-weight: 700;
-
   background: $third-background-color;
-  //border-radius: $primary-border-radius;
-  //border: none;
 }
 
 @mixin secondary-button($width,$height) {

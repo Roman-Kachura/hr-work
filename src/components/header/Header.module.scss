@@ -34,80 +34,6 @@
     border-radius: $primary-border-radius;
   }
 
-  .headerRadio {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: .5rem;
-    border-radius: $primary-border-radius;
-    background: rgba(255, 239, 98, 0.3);
-    color: $primary-color;
-    cursor: pointer;
-    position: relative;
-
-    .listImage {
-      width: 30px;
-      height: 30px;
-      margin-right: 8px;
-    }
-
-    .radioText {
-      margin-right: 42px;
-    }
-
-    .radioList {
-      width: 100%;
-      height: 0;
-      opacity: 0;
-      background: $third-background-color;
-      border-radius: $primary-border-radius;
-      border: 1px solid #000;
-      position: absolute;
-      left: 0;
-      top: 2rem;
-      transition: .3s;
-      z-index: -10000;
-
-      &.open {
-        height: auto;
-        opacity: 1;
-        z-index: 10000;
-
-        .listItem {
-          height: auto;
-          opacity: 1;
-        }
-      }
-
-      .listItem {
-        height: auto;
-        opacity: 1;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding: .25rem;
-        border-radius: $primary-border-radius;
-        color: $primary-color;
-        transition: .3s;
-
-        &:hover,
-        &:focus {
-          background: $second-background-color;
-        }
-
-        .listImage {
-          width: 30px;
-          height: 30px;
-          margin-right: 8px;
-        }
-
-        .listText {
-          margin-right: 42px;
-        }
-      }
-    }
-  }
-
   .avatar {
     width: 55px;
     height: 55px;
@@ -174,6 +100,84 @@
 
     .bar3 {
       transform: translate(0, -11px) rotate(45deg);
+    }
+  }
+}
+
+.headerRadio {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: .5rem;
+  border-radius: $primary-border-radius;
+  background: rgba(255, 239, 98, 0.3);
+  color: $primary-color;
+  cursor: pointer;
+  position: relative;
+
+  .listImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  .radioText {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: inherit;
+    margin-right: 42px;
+  }
+
+  .radioList {
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background: $third-background-color;
+    border-radius: $primary-border-radius;
+    border: 1px solid #000;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    transition: .3s;
+    z-index: -10000;
+
+    &.open {
+      height: auto;
+      opacity: 1;
+      z-index: 10000;
+
+      .listItem {
+        height: auto;
+        opacity: 1;
+      }
+    }
+
+    .listItem {
+      height: auto;
+      opacity: 1;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: .25rem;
+      border-radius: $primary-border-radius;
+      color: $primary-color;
+      transition: .3s;
+
+      &:hover,
+      &:focus {
+        background: $second-background-color;
+      }
+
+      .listImage {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+      }
+
+      .listText {
+        margin-right: 42px;
+      }
     }
   }
 }

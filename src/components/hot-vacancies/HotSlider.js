@@ -61,7 +61,6 @@ export const HotSlider = () => {
         if (window.innerWidth > 900) showItemCount = 3;
         if (window.innerWidth < 900) showItemCount = 2;
         if (window.innerWidth < 700) showItemCount = 1;
-        console.log(showItemCount)
     }
 
     resizeHandler();

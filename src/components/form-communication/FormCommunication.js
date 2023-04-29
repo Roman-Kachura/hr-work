@@ -1,5 +1,6 @@
 import style from './FormCommunication.module.scss';
 import {FormSelect} from "../fields/FormSelect";
+import {FormRadio} from "../fields/FormRadio";
 
 export const FormCommunication = ({changeName}) => {
 
@@ -8,7 +9,7 @@ export const FormCommunication = ({changeName}) => {
       <form action="src/components/subscribe/Subscribe">
         <div className={style.formFields}>
           <label><input type="text" placeholder='Ваше имя' className="inputBase" onChange={changeHandle}/></label>
-          <FormSelect text='Выберете удобный способ связи'/>
+          <FormRadio text='Выберете удобный способ связи'/>
           <button className="baseBtn">Отправить</button>
         </div>
       </form>

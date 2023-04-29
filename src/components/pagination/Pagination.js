@@ -1,19 +1,35 @@
 import style from './Pagination.module.scss';
 import arrowDown from '../../images/arrow-down.svg';
+import {getPaginationButtons} from "./PaginationButtons";
 
-export const Pagination = () => {
+export const Pagination = ({pageCount, currentPage, changePage}) => {
+    const buttons = getPaginationButtons(pageCount, currentPage);
+    const pushButton = (item) => {
+        if (item === '...') return <span key={`span${item}`}>...</span>;
+        if (item === '>') {
+            return (
+                <button key={`btn${item}`} className={style.paginationIconButton}
+                        onClick={() => changePage(currentPage + 1)}>
+                    <span className={`${style.paginationIcon} image-container`}>
+                        <img src={arrowDown} alt=""/>
+                    </span>
+                </button>
+            )
+        }
+        const finishClassName = item === currentPage
+            ? `${style.paginationButton} ${style.active}`
+            : style.paginationButton;
+        return <button
+            key={`btn${item}`}
+            className={finishClassName}
+            onClick={() => changePage(item)}
+        >{item}
+        </button>
+
+    }
     return (
         <div className={style.pagination}>
-            <button className={`${style.paginationButton} ${style.active}`}>1</button>
-            <button className={style.paginationButton}>2</button>
-            <button className={style.paginationButton}>3</button>
-            <span>...</span>
-            <button className={style.paginationButton}>15</button>
-            <button className={style.paginationIconButton}>
-                <span className={`${style.paginationIcon} image-container`}>
-                    <img src={arrowDown} alt=""/>
-                </span>
-            </button>
+            {buttons.map(pushButton)}
         </div>
     )
 }

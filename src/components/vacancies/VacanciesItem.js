@@ -2,6 +2,7 @@ import style from './Vacancies.module.scss';
 import {FormSelect} from "../fields/FormSelect";
 import {NavLink} from "react-router-dom";
 import vacanciesImage from '../../images/vacancies-image.svg';
+import {HeaderRadio} from "../header/HeaderRadio";
 
 export const VacanciesItem = () => {
     return (
@@ -16,7 +17,7 @@ export const VacanciesItem = () => {
                 <div className={style.itemForm}>
                     <div className={style.formTitle}>Остались вопросы? Звоните!</div>
                     <div className={style.formButtons}>
-                        <FormSelect text='Выберете удобный способ связи' className={style.formSelect}/>
+                        <HeaderRadio text='Выберете удобный способ связи' className={style.formSelect} xs/>
                         <NavLink className={"baseBtn"} to={'/vacancy'}>Смотреть условия</NavLink>
                     </div>
                 </div>

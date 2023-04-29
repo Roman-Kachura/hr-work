@@ -2,6 +2,7 @@ import style from './FormRequestConsult.module.scss';
 import {NavLink} from "react-router-dom";
 import {FormSelect} from "../fields/FormSelect";
 import {FormFile} from "../fields/FormFile";
+import {FormRadio} from "../fields/FormRadio";
 
 export const FormRequestConsult = ({className}) => {
     const submitHandler = (e) => {
@@ -21,7 +22,7 @@ export const FormRequestConsult = ({className}) => {
             </div>
             <div className={finalClassName}>
                 <label><input type='text' className="inputBase" placeholder='Ваше имя'/></label>
-                <FormSelect text='Выберете удобный способ связи'/>
+                <FormRadio text='Выберете удобный способ связи'/>
                 <FormFile/>
                 <label><input className="baseBtn" type='submit' value='Отправить'/></label>
             </div>

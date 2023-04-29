@@ -1,6 +1,5 @@
 import style from './Vacancies.module.scss';
 import {VacanciesSideBar} from "./VacanciesSideBar";
-import {VacanciesItem} from "./VacanciesItem";
 import {VacanciesContent} from "./VacanciesContent";
 
 export const Vacancies = () => {

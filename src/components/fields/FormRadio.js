@@ -1,10 +1,10 @@
-import style from "./Header.module.scss";
+import style from './Fields.module.scss';
 import viberImage from "../../images/viber.svg";
 import whatsupImage from "../../images/modal/whatsup.svg";
 import telegramImage from "../../images/modal/telegram.svg";
 import arrowDown from "../../images/arrow-down.svg";
 import {useEffect, useState} from "react";
-import {ListItem} from "./ListItem";
+import {FormListItem} from "./FormListItem";
 
 const items = [
     {id: 0, img: viberImage, text: 'Viber', href: ''},
@@ -12,12 +12,17 @@ const items = [
     {id: 2, img: telegramImage, text: 'Telegram', href: ''},
 ]
 
-export const HeaderRadio = ({text, className, listItemClassName, xs}) => {
+export const FormRadio = ({text}) => {
     const [open, setOpen] = useState(false);
-    const changeOpenHandler = () => setOpen(!open);
-    const clickItemHandler = () => changeOpenHandler();
+    const [contact, setContact] = useState('');
+    const changeOpenHandler = () => {
+        setOpen(!open);
+    }
+    const clickItemHandler = (value) => {
+        setContact(value);
+        changeOpenHandler();
+    };
     const radiosListClassName = open ? `${style.radioList} ${style.open}` : style.radioList;
-    const finishClassName = className ? `${className} ${style.headerRadio}` : style.headerRadio;
     useEffect(() => {
         if (open) {
             const closeHandler = () => setTimeout(() => setOpen(false), 10000);
@@ -26,22 +31,20 @@ export const HeaderRadio = ({text, className, listItemClassName, xs}) => {
         }
     }, [open]);
     return (
-        <div className={finishClassName} onClick={changeOpenHandler}>
-            <span className={style.radioText} style={{fontSize: xs ? '1rem' : 'inherit'}}>{!text ? 'Способ связи' : text}</span>
-            <div className={'image-container'}>
+        <div className={style.formRadio} onClick={changeOpenHandler}>
+            <span className={style.radioText}>{!contact ? `${text}` : contact}</span>
+            <div className={`${style.radioArrow} image-container`}>
                 <img src={arrowDown} alt=""
                      style={{transform: open ? 'rotate(180deg)' : 'rotate(0deg)', transition: '.3s'}}/>
             </div>
             <div className={radiosListClassName}>
                 {
                     items.map(i =>
-                        <ListItem
+                        <FormListItem
                             key={i.id}
                             text={i.text}
-                            href={i.href}
                             img={i.img}
                             clickItemHandler={clickItemHandler}
-                            className={listItemClassName}
                         />
                     )
                 }
@@ -49,3 +52,4 @@ export const HeaderRadio = ({text, className, listItemClassName, xs}) => {
         </div>
     )
 }
+

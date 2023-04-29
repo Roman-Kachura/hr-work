@@ -4,7 +4,6 @@ import {modalDB} from "./modalData";
 import {LinksItem} from "./LinksItem";
 
 export const ModalWindow = ({closeModal, isOpen}) => {
-
     const finishClassName = isOpen ? `${style.modal} ${style.active}` : style.modal;
     return (
         <div className={finishClassName}>

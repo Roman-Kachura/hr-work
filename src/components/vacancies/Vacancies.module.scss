@@ -153,8 +153,12 @@
         gap: 2.0833vw;
 
         .formSelect {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           @include form-input;
           margin: 0;
+          position: relative;
 
           @media (max-width: 767px) {
             height: 46px;
